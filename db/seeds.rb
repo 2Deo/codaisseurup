@@ -9,9 +9,6 @@ Category.delete_all
 Event.delete_all
 User.delete_all
 
-arno = User.create(email: "arno@codaisseurup.com", password: "abcd1234")
-
-event = Event.create(name: "Surprise Party", description: "Surprise for my biggest friend", location: "Amsterdam", includes_food: false, includes_drinks: true, price: 5.00, starts_at: 10.days.from_now, ends_at: 12.days.from_now, capacity: 100, active: true,  user: arno)
 
 Category.create!([
   { name: "Sports" },
@@ -26,6 +23,9 @@ Category.destroy_all
 Event.destroy_all
 Profile.destroy_all
 User.destroy_all
+
+arno = User.create(email: "arno@codaisseurup.com", password: "abcd1234")
+event = Event.create(name: "Surprise Party", description: "Surprise for my biggest friend", location: "Amsterdam", includes_food: false, includes_drinks: true, price: 5.00, starts_at: 10.days.from_now, ends_at: 12.days.from_now, capacity: 100, active: true,  user: arno)
 
 photo1 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0516_PRINT_A3p_web_ivbx4b)
 photo2 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0388_web_mzttxt)

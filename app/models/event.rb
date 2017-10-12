@@ -15,6 +15,6 @@ class Event < ApplicationRecord
     end
 
     has_many :photos
-    end
+    
 
 end

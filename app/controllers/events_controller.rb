@@ -44,7 +44,7 @@ end
         @event.photos.create(image: image)
       end
 
-      redirect_to edit_event_path(@event), notice: "Event updated"
+      redirect_to @event, notice: "Event updated"
     else
       render :edit
     end
