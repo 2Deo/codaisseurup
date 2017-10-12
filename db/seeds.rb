@@ -20,3 +20,29 @@ Category.create!([
   { name: "Family" },
   { name: "Study" },
 ])
+
+Photo.destroy_all
+Category.destroy_all
+Event.destroy_all
+Profile.destroy_all
+User.destroy_all
+
+photo1 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0516_PRINT_A3p_web_ivbx4b)
+photo2 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0388_web_mzttxt)
+photo3 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0335_web_ezakry)
+photo4 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0324_PRINT_A3p_web_bafaxs)
+photo5 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0321_PRINT_A3p_web_qllrwx)
+photo6 = Photo.create(remote_image_url: https://cloudinary.com/console/media_library#/dialog/image/upload/IMG_0290_web_caakpk)
+
+
+# Categories
+sports = Category.create!(name: "Sports")
+outdoors = Category.create!(name: "Outdoors")
+friends = Category.create!(name: "Friends")
+family = Category.create!(name: "Family")
+study = Category.create!(name: "Study")
+
+# Users
+miriam = User.create!(email: "miriam@codaisseurbnb.com", password: "abcd1234")
+wouter = User.create!(email: "wouter@codaisseurbnb.com", password: "abcd1234")
+matt = User.create!(email: "matt@codaisseurbnb.com", password: "abcd1234")

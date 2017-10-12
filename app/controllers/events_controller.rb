@@ -9,6 +9,7 @@ before_action :authenticate_user!, except: [:show]
 
   def show
     @categories = @event.categories
+    @photos = @event.photos
   end
 
   def new
